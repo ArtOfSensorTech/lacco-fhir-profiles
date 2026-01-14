@@ -1,0 +1,17 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lacco-device",
+  "url": "http://fhir.fi/lacco/StructureDefinition/lacco-device",
+  "name": "LaccoDevice",
+  "title": "Lacco Multisensor Device",
+  "status": "draft",
+  "date": "2026-01-14",
+  "publisher": "Arto Kivimäki",
+  "description": "Wearable device that simultaneously measures environmental (CO₂, VOC, temperature, humidity, UV) and physiological (SpO₂, HRV, respiration) parameters with synchronized timestamps.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint"
+}

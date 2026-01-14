@@ -1,0 +1,39 @@
+{
+  "resourceType": "Device",
+  "id": "lacco-001",
+  "identifier": [
+    {
+      "system": "http://fhir.fi/lacco/device-id",
+      "value": "LACCO-2026-001"
+    }
+  ],
+  "status": "active",
+  "manufacturer": "Arto Kivimäki",
+  "deviceName": [
+    {
+      "name": "Lacco Multisensor Unit",
+      "type": "user-friendly-name"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "706767009",
+        "display": "Patient data recorder"
+      }
+    ],
+    "text": "Wearable environmental and physiological monitoring device"
+  },
+  "property": [
+    {
+      "type": {"text": "IP Rating"},
+      "valueCode": [{"text": "IP68"}]
+    }
+  ],
+  "note": [
+    {
+      "text": "Utility model protected in Finland. Designed for CPAP therapy optimization and asthma environmental trigger identification."
+    }
+  ]
+}

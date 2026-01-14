@@ -1,0 +1,49 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lacco-voc-observation",
+  "url": "http://fhir.fi/lacco/StructureDefinition/lacco-voc-observation",
+  "name": "LaccoVOCObservation",
+  "title": "Lacco VOC Observation",
+  "status": "draft",
+  "date": "2026-01-14",
+  "publisher": "Arto Kivimäki",
+  "description": "Volatile Organic Compounds measurement. Known asthma trigger and sleep quality indicator.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89257-1",
+              "display": "Volatile organic compounds [Mass/volume] in Air"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "min": 1
+      },
+      {
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
+        "fixedString": "ppm"
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 1
+      }
+    ]
+  }
+}

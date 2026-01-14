@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lacco-co2-observation",
+  "url": "http://fhir.fi/lacco/StructureDefinition/lacco-co2-observation",
+  "name": "LaccoCO2Observation",
+  "title": "Lacco CO₂ Concentration Observation",
+  "status": "draft",
+  "date": "2026-01-14",
+  "publisher": "Arto Kivimäki",
+  "description": "Observation profile for indoor/outdoor CO₂ concentration measured by Lacco device. Critical for CPAP therapy optimization and asthma management.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "CO₂ concentration in air",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "83064-4",
+              "display": "Carbon dioxide [Partial pressure] in Air"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "min": 1,
+        "type": [{"code": "Quantity"}]
+      },
+      {
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
+        "fixedString": "ppm"
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": ["http://fhir.fi/lacco/StructureDefinition/lacco-device"]
+          }
+        ]
+      }
+    ]
+  }
+}

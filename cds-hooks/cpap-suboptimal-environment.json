@@ -1,0 +1,33 @@
+{
+  "id":  "cpap-suboptimal-environment",
+  "hook": "patient-view",
+  "title": "CPAP Suboptimal Environment Alert",
+  "description": "Alerts clinician when high bedroom CO₂ or poor air quality may be affecting CPAP therapy effectiveness.",
+  "prefetch": {
+    "patient": "Patient/{{context.patientId}}",
+    "conditions": "Condition?patient={{context.patientId}}&code=http://snomed.info/sct|78275009",
+    "recentObservations": "Observation?patient={{context.patientId}}&date=gt{{today minus 7 days}}"
+  },
+  "cards": [
+    {
+      "summary": "⚠️ High bedroom CO₂ may be affecting CPAP therapy",
+      "detail": "Patient has good CPAP adherence and appropriate pressure, but bedroom CO₂ is very high (2100 ppm avg) with low HRV (45 ms). High CO₂ can cause central sleep apnea independent of CPAP settings.\n\nRecommendation: Address environmental factors before adjusting CPAP pressure.",
+      "indicator": "warning",
+      "source": {
+        "label": "Lacco CPAP Environmental Monitoring",
+        "url": "https://github.com/ArtOfSensorTech/lacco-fhir-profiles"
+      },
+      "suggestions": [
+        {
+          "label": "Recommend bedroom ventilation improvement",
+          "actions": [
+            {
+              "type": "create",
+              "description": "Add ventilation recommendation to care plan"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

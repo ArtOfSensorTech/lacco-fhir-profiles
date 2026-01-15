@@ -57,7 +57,31 @@ First device combining environmental and physiological monitoring for CPAP optim
 
 ## License
 
-MIT License
+### Software and FHIR Profiles
+
+This project's **FHIR profiles, example data, CDS Hooks, and software code** are licensed under the **MIT License**.
+
+You are free to:
+- ✅ Use, modify, and distribute the FHIR profiles
+- ✅ Integrate them into commercial or non-commercial projects
+- ✅ Fork and adapt for your own use cases
+
+See [LICENSE](LICENSE) for full details.
+
+### Device Concept
+
+The underlying **wearable device concept** (simultaneous physiological and environmental monitoring) is subject to:
+
+**Finnish Utility Model Application**  
+Filed: December 8, 2025  
+Status: Pending examination
+
+**Important:**
+- The MIT License covers **only the software and data models** in this repository
+- It does **NOT grant rights** to manufacture, distribute, or commercialize devices based on the utility model
+- The device concept remains subject to intellectual property protection
+
+For device licensing inquiries or research collaboration on the hardware concept, contact: [arto.kivimaki@tutanota.com](mailto:arto.kivimaki@tutanota.com)
 
 ## Contact
 

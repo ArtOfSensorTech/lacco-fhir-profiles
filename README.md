@@ -1,5 +1,13 @@
 # Lacco FHIR Profiles
 
+## 🎬 Pitch Video
+
+▶️ **[Watch on Vimeo](https://vimeo.com/1154677257)** - 5-minute pitch for Finnish Health Data Hackathon 2026
+
+*Alternative: [Download from GitHub](./pitch-video.mp4) (13 MB)*
+
+---
+
 FHIR Implementation Guide for environmental-physiological monitoring in CPAP therapy optimization and asthma management.
 
 **Developed at:** Finnish Health Data Hackathon 2026  
